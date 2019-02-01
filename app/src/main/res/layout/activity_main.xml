@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    xmlns:leaf="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/yellow_bg"/>
+
+        <com.rdc.leavesloading.LeavesLoading
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="match_parent"
+            android:id="@+id/myleaf"
+            leaf:fanSrc="@drawable/iv_fan_1"
+            leaf:leafSrc="@drawable/iv_leaf_1"
+            leaf:progress="50"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            leaf:layout_constraintEnd_toEndOf="parent"
+            leaf:layout_constraintStart_toStartOf="parent"
+            leaf:layout_constraintBottom_toTopOf="@id/layout2"
+            leaf:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="进度:"
+                android:textColor="@color/yellow_bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                leaf:layout_constraintStart_toStartOf="parent"
+                leaf:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:max="100"
+                android:progress="50"
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/progress"
+                android:gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorAccent"
+                android:text="50"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            leaf:layout_constraintEnd_toEndOf="parent"
+            leaf:layout_constraintStart_toStartOf="parent"
+            leaf:layout_constraintBottom_toTopOf="@id/layout3"
+            leaf:layout_constraintTop_toBottomOf="@id/layout1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:minWidth="120dp"
+                android:layout_height="wrap_content"
+                android:text="叶子周转时间:"
+                android:textColor="@color/yellow_bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                leaf:layout_constraintStart_toStartOf="parent"
+                leaf:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/leaf_rotate_speed_bar"
+                android:layout_width="0dp"
+                android:max="5000"
+                android:progress="2000"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/leaf_rotate_speed"
+                android:gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorAccent"
+                android:text="2000"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            leaf:layout_constraintEnd_toEndOf="parent"
+            leaf:layout_constraintStart_toStartOf="parent"
+            leaf:layout_constraintBottom_toTopOf="@id/layout4"
+            leaf:layout_constraintTop_toBottomOf="@id/layout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:minWidth="120dp"
+                android:layout_height="wrap_content"
+                android:text="叶子周漂时间:"
+                android:textColor="@color/yellow_bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                leaf:layout_constraintStart_toStartOf="parent"
+                leaf:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/leaf_float_speed_bar"
+                android:layout_width="0dp"
+                android:max="5000"
+                android:progress="1500"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/leaf_float_speed"
+                android:gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorAccent"
+                android:text="1500"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            leaf:layout_constraintEnd_toEndOf="parent"
+            leaf:layout_constraintStart_toStartOf="parent"
+            leaf:layout_constraintBottom_toTopOf="@id/layout5"
+            leaf:layout_constraintTop_toBottomOf="@id/layout3">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="扇子转速:"
+                android:textColor="@color/yellow_bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                leaf:layout_constraintStart_toStartOf="parent"
+                leaf:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/fan_speed_bar"
+                android:layout_width="0dp"
+                android:max="50"
+                android:progress="5"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/fan_speed"
+                android:gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorAccent"
+                android:text="5"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            leaf:layout_constraintEnd_toEndOf="parent"
+            leaf:layout_constraintStart_toStartOf="parent"
+            leaf:layout_constraintBottom_toTopOf="@id/layout6"
+            leaf:layout_constraintTop_toBottomOf="@id/layout4">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="叶子样式:"
+                android:textColor="@color/yellow_bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                leaf:layout_constraintStart_toStartOf="parent"
+                leaf:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="样式一"
+                    android:clickable="false"
+                    android:textStyle="bold"
+                    android:checked="true"
+                    android:id="@+id/cb_leaf_1"
+                    android:textColor="@drawable/checkbox_selector"
+                    android:theme="@style/MyCheckBox"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cb_leaf_2"
+                    android:text="样式二"
+                    android:textStyle="bold"
+                    android:textColor="@drawable/checkbox_selector"
+                    android:theme="@style/MyCheckBox"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/cb_leaf_3"
+                    android:layout_height="wrap_content"
+                    android:text="样式三"
+                    android:textStyle="bold"
+                    android:textColor="@drawable/checkbox_selector"
+                    android:theme="@style/MyCheckBox"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            leaf:layout_constraintEnd_toEndOf="parent"
+            leaf:layout_constraintStart_toStartOf="parent"
+            leaf:layout_constraintBottom_toBottomOf="parent"
+            leaf:layout_constraintTop_toBottomOf="@id/layout5">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="扇子样式:"
+                android:textColor="@color/yellow_bg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                leaf:layout_constraintStart_toStartOf="parent"
+                leaf:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="样式一"
+                    android:clickable="false"
+                    android:id="@+id/cb_fan_1"
+                    android:textStyle="bold"
+                    android:checked="true"
+                    android:textColor="@drawable/checkbox_selector"
+                    android:theme="@style/MyCheckBox"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="样式二"
+                    android:textStyle="bold"
+                    android:id="@+id/cb_fan_2"
+                    android:textColor="@drawable/checkbox_selector"
+                    android:theme="@style/MyCheckBox"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="样式三"
+                    android:textStyle="bold"
+                    android:id="@+id/cb_fan_3"
+                    android:textColor="@drawable/checkbox_selector"
+                    android:theme="@style/MyCheckBox"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
