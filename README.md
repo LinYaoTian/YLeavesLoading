@@ -20,7 +20,7 @@
 
 - 方式二：
   在 Project 的 build.gradle 中：
-  ```
+  ```groovy
   allprojects {
 		repositories {
 			...
@@ -29,7 +29,7 @@
 	}
   ```
   在 app 的 build.gradle 中：
-  ```
+  ```groovy
    implementation 'com.github.LinYaoTian:LeavesLoading:1.0.0'
   ```
 
