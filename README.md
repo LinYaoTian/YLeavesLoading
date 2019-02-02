@@ -19,6 +19,7 @@
   下载 `LeavesLoading` Library 拷贝进工程中。
 
 - 方式二：
+  
   在 Project 的 build.gradle 中：
   ```groovy
   allprojects {
