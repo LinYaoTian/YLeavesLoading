@@ -20,7 +20,7 @@
 
 - 方式二：
   
-  在 Project 的 build.gradle 中：
+  在 project 的 build.gradle 中：
   ```groovy
   allprojects {
 		repositories {
