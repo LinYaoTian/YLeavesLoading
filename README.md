@@ -17,12 +17,20 @@
 - 方式一：
 
   下载 `LeavesLoading` Library 拷贝进工程中。
-  ​
 
-- 方式二：Gradle (目前还在审核中，可能会集成失败！)：
-
-  ```groovy
-  implementation  'com.rdc:LeavesLoading:1.0.0'
+- 方式二：
+  在 Project 的 build.gradle 中：
+  ```
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  ```
+  在 app 的 build.gradle 中：
+  ```
+   implementation 'com.github.LinYaoTian:LeavesLoading:1.0.0'
   ```
 
 ## 3. 如何使用
