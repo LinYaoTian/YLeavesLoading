@@ -19,7 +19,7 @@
   下载 `LeavesLoading` Library 拷贝进工程中。
   ​
 
-- 方式二：Gradle ：
+- 方式二：Gradle (目前还在审核中，可能会集成失败！)：
 
   ```groovy
   implementation  'com.rdc:LeavesLoading:1.0.0'
