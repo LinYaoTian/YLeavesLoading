@@ -8,7 +8,7 @@
 
 **效果图：** 
 
-![](https://github.com/LinYaoTian/TestLeavesLoading/blob/master/test1.gif?raw=true)
+![](https://user-gold-cdn.xitu.io/2019/2/1/168a7e1a7a996451?imageslime)
 
 基本实现了原图的效果
 
