@@ -14,9 +14,13 @@
 
 ## 2. 如何添加进项目中
 
+仓库：
+
 - 方式一：
 
-  下载 `LeavesLoading` Library 拷贝进工程中。
+  下载 [LeavesLoading](https://github.com/LinYaoTian/LeavesLoading) Library 拷贝进工程中。
+  
+  tip： 不是当前的 TestLeavesLoading 项目哦！	
 
 - 方式二：
   
